@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #333333;
+}
+
+header {
+  padding: 12px;
+  background-color: #444444;
+}
+
+h1, h2 {
+  color: #FFFFFF;
+  text-align: center;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+h2 {
+  margin-left: 10px;
+  font-size: 15px;
+}
+
+.header-options {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.header-options-sub {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+
+.header-buttons {
+  margin-left: 20px;
+  width: 150px;
+  height: 40px;
+  border-radius: 20px;
+}
+
+.header-inputs {
+  margin-left: 10px;
+  padding: 12px;
+  width: 600px;
+  height: 40px;
+  border-radius: 20px;
+}
+
+#image-background {
+  display: flex;
+  background: url("../assets/imgs/pizza-background.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  align-items: center;
+  height: 100vh;
+}
+
+.background-options {
+  margin: 30px;
+}
+
+.background-buttons {
+  margin-left: 20px;
+  width: 150px;
+  height: 40px;
+  border-radius: 20px;
+}
+
+.header-buttons:hover,
+.background-buttons:hover {
+  cursor: pointer;
+  background-color: lightgray;
+}
+
+/*# sourceMappingURL=style.css.map */
