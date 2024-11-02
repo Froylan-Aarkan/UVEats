@@ -1,7 +1,7 @@
 $font: 'Open Sans', sans-serif;
 
-$color-background: #333333;
-$color-header: #444444;
+$color-background: #131313;
+$color-header: #131313;
 $color-text: #FFFFFF;
 
 * {
@@ -35,6 +35,41 @@ h2 {
     font-size: 15px;
 }
 
+button {
+    border-radius: 6px;
+    margin-left: 20px;
+}
+  
+input {
+    border-radius: 8px;
+    border: none;
+}
+
+.button-primary {
+    background-color: transparent;
+    border-color: orangered;
+    color: orangered;
+    width: 200px;
+    height: 60px;
+}
+  
+.button-secondary {
+    background-color: #313131;
+    border: none;
+    color: white;
+    width: 150px;
+    height: 40px;
+}
+  
+.input-search {
+    margin-left: 10px;
+    padding: 12px;
+    width: 400px;
+    height: 40px;
+    background-color: #313131;
+    color: gray;
+}
+
 .header-options {
     display: flex;
     justify-content: space-between;
@@ -46,21 +81,6 @@ h2 {
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap;
-}
-
-.header-buttons {
-    margin-left: 20px;
-    width: 150px;
-    height: 40px;
-    border-radius: 20px;
-}
-
-.header-inputs {
-    margin-left: 10px;
-    padding: 12px;
-    width: 600px;
-    height: 40px;
-    border-radius: 20px;
 }
 
 #image-background {
@@ -77,15 +97,25 @@ h2 {
     margin: 30px;
 }
 
-.background-buttons {
-    margin-left: 20px;
-    width: 150px;
-    height: 40px;
-    border-radius: 20px;
+.input-search:focus {
+    background-color: white;
+    color: black;
+    outline: none;
 }
-
-.header-buttons:hover,
-.background-buttons:hover {
+  
+.button-primary:hover {
     cursor: pointer;
-    background-color: lightgray;
+    background-color: orangered;
+    color: white;
+}
+  
+.button-primary:active, 
+.button-secondary:active {
+    transform: translateY(2px);
+}
+  
+.button-secondary:hover {
+    cursor: pointer;
+    background-color: white;
+    color: #131313;
 }
