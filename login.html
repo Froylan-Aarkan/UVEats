@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>UVEats!</title>
+        <link rel="stylesheet" href="css/login-style.css">
+        <script src="https://unpkg.com/lucide@latest"></script>
+    </head>
+
+    <body>
+        <header>
+            <h1>UVEats</h1>
+        </header>
+
+        <main>
+            <div class="login-container">
+                <h2>Login</h2>
+                <form action="#" method="post">
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" required placeholder="YourEmail@example.com">
+                    
+                    <label for="password">Password:</label>
+                    <input type="password" name="password" required placeholder="Password">
+                    
+                    <button type="submit">Login</button>
+                </form>
+
+                <div class="forgot-password">
+                    <a href="#">Without an account? Register here</a>
+                </div>
+
+                <div class="forgot-password">
+                    <a href="#">Forgot your password?</a>
+                </div>
+
+                <div class="divider">
+                    <span>Or</span>
+                </div>
+
+                <div class="social-login">
+                    <a href="#" class="social-button">
+                        <i data-lucide="google" aria-hidden="true"></i>
+                        Login with Google
+                    </a>
+                    <a href="#" class="social-button">
+                        <i data-lucide="apple" aria-hidden="true"></i>
+                        Login with Apple
+                    </a>
+                </div>
+            </div>            
+        </main>
+
+        <script>
+            lucide.createIcons();
+        </script>
+    </body>
+</html>

@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-image: url("../assets/imgs/pizza-background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+header {
+  background-color: rgba(19, 19, 19, 0.95);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+main {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+label {
+  margin-top: 10px;
+  color: #FFFFFF;
+  font-weight: bold;
+}
+
+input {
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #df3c00;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+h2 {
+  text-align: center;
+  color: #FFFFFF;
+}
+
+button:hover {
+  background-color: #bf3400;
+}
+
+button:active {
+  transform: translateY(2px);
+}
+
+.login-container {
+  background-color: rgb(19, 19, 19);
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+}
+
+.forgot-password {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.forgot-password a {
+  color: #df3c00;
+  text-decoration: none;
+}
+
+.forgot-password a:hover {
+  text-decoration: underline;
+}
+
+.social-login {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.social-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border: 1px solid #df3c00;
+  border-radius: 3px;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+  color: #ff4500;
+  transition: background-color 0.3s;
+}
+
+.social-button:hover {
+  background-color: #df3c00;
+  color: #ffffff;
+}
+
+.social-button:active {
+  transform: translateY(2px);
+}
+
+.social-button i {
+  margin-right: 10px;
+}
+
+.divider {
+  margin: 20px 0;
+  text-align: center;
+  position: relative;
+}
+
+.divider::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  border-top: 1px solid #ddd;
+}
+
+.divider span {
+  background-color: rgb(19, 19, 19);
+  padding: 0 10px;
+  position: relative;
+  color: #666;
+}
+
+/*# sourceMappingURL=login-style.css.map */
