@@ -1,8 +1,12 @@
-$font: 'Open Sans', sans-serif;
+$font: 'Roboto', sans-serif;
+$font-logo: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+$icon-font: 'font-awesome';
 
-$color-background: #131313;
+$color-background-b: #000000;
 $color-header: #131313;
-$color-text: #FFFFFF;
+$color-text-w: #FFFFFF;
+$color-text-b: #000000;
+$color-background-g: #313131;
 
 * {
     margin: 0;
@@ -13,7 +17,7 @@ body {
     font-family: $font;
     margin: 0;
     padding: 0;
-    background-color: $color-background;
+    background-color: $color-background-b;
 }
 
 header {
@@ -22,17 +26,50 @@ header {
 }
 
 h1, h2 {
-    color: $color-text;
+    color: $color-text-w;
     text-align: center;
 }
 
 h1 {
+    font-family: $font-logo;
     font-size: 30px;
 }
 
 h2 {
     margin-left: 10px;
     font-size: 15px;
+}
+
+#button-icon-menu {
+    margin-left: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#button-icon-menu:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+#header-title {
+    margin-top: 4px;
+    margin-left: 10px;
+}
+
+#location-heading {
+    margin-top: 10px;
+}
+
+#background-legend {
+    margin-bottom: 40px;
+    font-size: 48px;
 }
 
 button {
@@ -51,10 +88,13 @@ input {
     color: orangered;
     width: 200px;
     height: 60px;
+    margin-left: 0px;
+    position: relative;
+    bottom: 19px;
 }
   
 .button-secondary {
-    background-color: #313131;
+    background-color: $color-background-g;
     border: none;
     color: white;
     width: 150px;
@@ -66,7 +106,7 @@ input {
     padding: 12px;
     width: 400px;
     height: 40px;
-    background-color: #313131;
+    background-color: $color-background-g;
     color: gray;
 }
 
@@ -95,11 +135,13 @@ input {
 
 .background-options {
     margin: 30px;
+    padding: 12px;
+    background-color: rgba(19, 19, 19, 0.8);
 }
 
 .input-search:focus {
     background-color: white;
-    color: black;
+    color: $color-text-b;
     outline: none;
 }
   
@@ -111,11 +153,156 @@ input {
   
 .button-primary:active, 
 .button-secondary:active {
-    transform: translateY(2px);
+    transform: translateY(1px);
 }
   
 .button-secondary:hover {
     cursor: pointer;
     background-color: white;
-    color: #131313;
+    color: $color-text-b;
+}
+
+.svg-container {
+    height: 1;
+}
+
+.test {
+    background-color: white;
+    height: 50vh;
+}
+
+.test-1 {
+    background-color: white;
+    height: 100vh;
+}
+
+.footer {
+    background-color: $color-background-b;
+    height: 100vh;
+}
+
+.information {
+    height: 50vh;
+}
+
+.contact {
+    height: 50vh;
+}
+
+#uveats-title {
+    margin-top: 3%;
+    margin-left: 0;
+    font-family: $font-logo;
+    font-size: 35px;
+}
+
+.help-center {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    padding-left: 10%;
+    justify-content: start;
+    margin-top: 1%;
+}
+
+.help-center-option {
+    margin-top: 2%;
+    color: #FFFFFF;
+}
+
+#contact-title {
+    margin-top: 3%;
+    margin-left: 0;
+    font-size: 35px;
+}
+
+.social-information {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-top: 4%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.social-media {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 50%;
+    gap: 58px;
+}
+
+.users-personal-information {
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.social-media-buttons {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+.social-media-buttons:hover {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+#personal-information-privacy {
+    color: #FFFFFF;
+}
+
+.downloads {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 75px;
+    margin-top: 1%;
+    margin-left: 10%;
+}
+
+.downloads-app {
+    width: 128px;
+    height: 128px;
+}
+
+.copyright-rules {
+    display: flex;
+    flex-wrap: nowrap;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.copyright {
+    width: 50%;
+    color: gray;
+    font-size: 13px;
+    margin-top: 1%;
+}
+
+.rules {
+    width: 50%;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 64px;
+    justify-content: end;
+    margin-top: 1%;
+}
+
+.rules-options {
+    color: gray;
+    font-size: 13px;
 }
