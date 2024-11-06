@@ -4,164 +4,134 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>UVEats!</title>
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+        <link rel="stylesheet" href="css/style.css">       
     </head>
 
     <body>
         <header>
-            <div class="header-options">
-                <div class="header-options-sub">
-                    <button id="button-icon-menu">
-                        <svg id="icon-menu" xmlns="http://www.w3.org/2000/svg" height="25px" width="25px" viewBox="0 0 448 512">
-                            <title>Menu</title>
-                            <path fill="#ffffff" d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/>
-                        </svg>
-                    </button>
-                    <h1 id="header-title">
-                        UV Eats
-                    </h1>            
-                    <button class="button-secondary">
-                        Select the place of delivery
-                    </button>
-                    <h2 id="location-heading">
-                        Current location
-                    </h2>
+            <nav>
+                <div class="menu-logo">
+                    <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+                    <div class="logo">UV Eats</div>
                 </div>
-                <div class="header-options-sub">
-                    <input class="input-search" type="search" placeholder="Search food or restaurant"/>
-                    <button class="button-secondary">
-                        Car
-                    </button>                    
-                    <button class="button-secondary">
-                        Log in
-                    </button>
-                    <button class="button-secondary">
-                        Sign up
-                    </button>
-                </div>                
-            </div>        
+                <div class="search-bar">
+                    <input type="text" placeholder="Buscar restaurantes o platos">
+                </div>
+                <div class="nav-links">
+                    <a href="#" id="loginLink">Log in</a>
+                    <a href="#" id="signupLink">Sign up</a>
+                </div>
+            </nav>
         </header>
-
+    
         <main>
-            <section class="welcome">
-                <div id="image-background">
-                    <div class="background-options">
-                        <h1 id="background-legend">
-                            Deliverying orders near you
-                        </h1>
-                        <button class="button-primary">
-                            Find food
-                        </button>           
+            <section class="categories-container">
+                <div class="categories">
+                    <div class="category">
+                        <img src="/placeholder.svg?height=60&width=60" alt="Pizza">
+                        <p>Pizza</p>
+                    </div>
+                    <div class="category">
+                        <img src="/placeholder.svg?height=60&width=60" alt="Sushi">
+                        <p>Sushi</p>
+                    </div>
+                    <div class="category">
+                        <img src="/placeholder.svg?height=60&width=60" alt="Burger">
+                        <p>Burgers</p>
+                    </div>
+                    <div class="category">
+                        <img src="/placeholder.svg?height=60&width=60" alt="Mexican">
+                        <p>Mexican</p>
                     </div>
                 </div>
             </section>
-            <section class="test">
-                
-            </section>
-            <svg width="100%" height="1">
-                <line x1="6%" y1="0" x2="94%" y2="0" stroke="gray" stroke-width="1"/>
-            </svg>
-            <section class="test-1">
-
-            </section>
-            <svg width="100%" height="1">
-                <line x1="6%" y1="0" x2="94%" y2="0" stroke="gray" stroke-width="1"/>
-            </svg>
-            <section class="test">
-
+    
+            <section class="restaurants">
+                <div class="restaurant">
+                    <img src="/placeholder.svg?height=100&width=100" alt="Restaurant 1">
+                    <div class="restaurant-info">
+                        <h3>Restaurante Delicioso</h3>
+                        <p>$ • Italian, Pizza</p>
+                        <p>30-45 min • 4.5 ★</p>
+                    </div>
+                </div>
+                <div class="restaurant">
+                    <img src="/placeholder.svg?height=100&width=100" alt="Restaurant 2">
+                    <div class="restaurant-info">
+                        <h3>Sushi Express</h3>
+                        <p>$$ • Japanese, Sushi</p>
+                        <p>20-35 min • 4.7 ★</p>
+                    </div>
+                </div>
+                <div class="restaurant">
+                    <img src="/placeholder.svg?height=100&width=100" alt="Restaurant 3">
+                    <div class="restaurant-info">
+                        <h3>Burger King</h3>
+                        <p>$ • Burger, Fast food</p>
+                        <p>15-25 min • 4.2 ★</p>
+                    </div>
+                </div>
             </section>
         </main>
-
-        <footer class="footer">
-            <section class="information">
-                <div>
-                    <h2 id="uveats-title">UV Eats</h2>
-                </div>
-                <div class="help-center">
-                    <a class="help-center-option" href="">
-                        <p>Visit the Help center</p>
-                    </a>
-                </div>
-            </section>
-            <div>
-                <svg width="100%" height="1">
-                    <line x1="6%" y1="0" x2="94%" y2="0" stroke="gray" stroke-width="1"/>
-                </svg>
+    
+        <footer>
+            <p>© 2024 UV Eats. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://facebook.com" aria-label="Facebook">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                </a>
+                <a href="https://twitter.com" aria-label="Twitter">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg>
+                </a>
+                <a href="https://instagram.com" aria-label="Instagram">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>
+                </a>
             </div>
-            <section class="contact">
-                <div>
-                    <h2 id="contact-title">Contact us</h2>
-                </div>
-                <div class="social-information">
-                    <div class="social-media">
-                        <a class="social-media-buttons" href="https://www.facebook.com/">
-                            <svg xmlns="http://www.w3.org/2000/svg" height="22px" width="22px" viewBox="0 0 448 512">
-                                <title>Facebook</title>
-                                <path fill="#ffffff" d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64h98.2V334.2H109.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H255V480H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64z"/>
-                            </svg>
-                        </a>
-                        <a class="social-media-buttons" href="https://x.com/">
-                            <svg xmlns="http://www.w3.org/2000/svg" height="22px" width="22px" viewBox="0 0 512 512">
-                                <title>X</title>
-                                <path fill="#ffffff" d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/>
-                            </svg>
-                        </a>
-                        <a class="social-media-buttons" href="https://www.youtube.com/">
-                            <svg xmlns="http://www.w3.org/2000/svg" height="22px" width="22px" viewBox="0 0 576 512">
-                                <title>Youtube</title>
-                                <path fill="#ffffff" d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64S117.2 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 48.6-11.4 42.9-11.4 132.3-11.4 132.3s0 89.4 11.4 132.3c6.3 23.7 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zm-317.5 213.5V175.2l142.7 81.2-142.7 81.2z"/>
-                            </svg>
-                        </a>
-                        <a class="social-media-buttons" href="https://www.linkedin.com/">
-                            <svg xmlns="http://www.w3.org/2000/svg" height="22px" width="22px" viewBox="0 0 448 512">
-                                <title>LinkedIn</title>
-                                <path fill="#ffffff" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/>
-                            </svg>
-                        </a>
-                        <a class="social-media-buttons" href="https://www.instagram.com/">
-                            <svg xmlns="http://www.w3.org/2000/svg" height="22px" width="22px" viewBox="0 0 448 512">
-                                <title>Instagram</title>
-                                <path fill="#ffffff" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/>
-                            </svg>
-                        </a>
-                    </div>
-                    <div class="users-personal-information">
-                        <a id="personal-information-privacy" href="https://www.cloudflare.com/learning/privacy/what-is-personal-information/">
-                            Do not sell or share my personal information
-                        </a>
-                    </div>
-                </div>
-                <div class="downloads">
-                    <a href="https://play.google.com/store/">
-                        <img class="downloads-app" src="../UVEats/assets/imgs/svgs/google-play.svg" alt="Download the UVEats app for Android">
-                    </a>
-                    <a href="https://www.apple.com/mx/app-store/">
-                        <img class="downloads-app" src="../UVEats/assets/imgs/svgs/app-store.svg" alt="Download the UVEats app for iOS">
-                    </a>
-                </div>
-                <div class="copyright-rules">
-                    <div class="copyright">
-                        <p>
-                            &#169 2024 Universidad Veracruzana, Inc.
-                        </p>
-                    </div>
-                    <div class="rules">
-                        <a class="rules-options" href="https://www.w3schools.com/">
-                            <p>Privacy</p>
-                        </a>
-                        <a class="rules-options" href="https://www.w3schools.com/">
-                            <p>Accessibility</p>
-                        </a>
-                        <a class="rules-options" href="https://www.w3schools.com/">
-                            <p>Terms</p>
-                        </a>
-                        <a class="rules-options" href="https://www.w3schools.com/">
-                            <p>Pricing</p>
-                        </a>
-                    </div>
-                </div>
-            </section>
         </footer>
+    
+        <div class="menu">
+            <div class="menu-content">
+                <a href="#">Home</a>
+                <a href="#">Orders</a>
+                <a href="#">Favorites</a>
+                <a href="#">Profile</a>
+                <a href="#">Help</a>
+            </div>
+        </div>
+        <div class="overlay"></div>
+
+        <div id="loginForm" class="modal">
+            <div class="modal-content">
+              <span class="close" data-target="loginForm">&times;</span>
+              <h2>Log in</h2>
+              <form action="/login" method="POST">
+                    <label for="username">Username:</label>
+                    <input type="text" id="loginUsername" name="username" required>
+                
+                    <label for="password">Password:</label>
+                    <input type="password" id="loginPassword" name="password" required>
+                    
+                    <button type="submit">Submit</button>
+              </form>
+            </div>
+        </div>
+
+        <div id="signupForm" class="modal">
+            <div class="modal-content">
+                <span class="close" data-target="signupForm">&times;</span>
+                <h2>Sign up</h2>
+                <form action="/signup" method="POST">
+                    <label for="email">Email</label>
+                    <input type="text" id="signupEmail" name="email" required>
+
+                    <label for="password">Password:</label>
+                    <input type="password" id="signupPassword" name="password" required>
+
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+
+        <script src="js/script.js"></script>
     </body>
 </html>

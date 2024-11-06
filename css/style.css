@@ -1,300 +1,265 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-
+@charset "UTF-8";
 body {
   font-family: "Roboto", sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #000000;
+  background-color: #ECF0F1;
+  color: #34495E;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 header {
-  padding: 12px;
-  background-color: #131313;
+  background-color: #2C3E50;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-h1, h2 {
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main {
+  flex-grow: 1;
+}
+
+footer {
+  background-color: #2C3E50;
   color: #FFFFFF;
+  padding: 1rem;
   text-align: center;
 }
 
-h1 {
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  font-size: 30px;
-}
-
-h2 {
-  margin-left: 10px;
-  font-size: 15px;
-}
-
-#button-icon-menu {
-  margin-left: 0;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: transparent;
-  border: none;
+.menu-logo {
   display: flex;
-  justify-content: center;
   align-items: center;
-  cursor: pointer;
-  transition: background-color 0.3s;
+  gap: 1rem;
 }
 
-#button-icon-menu:hover {
-  background-color: rgba(255, 255, 255, 0.5);
-}
-
-#header-title {
-  margin-top: 4px;
-  margin-left: 10px;
-}
-
-#location-heading {
-  margin-top: 10px;
-}
-
-#background-legend {
-  margin-bottom: 40px;
-  font-size: 48px;
-}
-
-button {
-  border-radius: 6px;
-  margin-left: 20px;
-}
-
-input {
-  border-radius: 8px;
+.menu-toggle {
+  background: none;
   border: none;
-}
-
-.button-primary {
-  background-color: transparent;
-  border-color: orangered;
-  color: orangered;
-  width: 200px;
-  height: 60px;
-  margin-left: 0px;
-  position: relative;
-  bottom: 19px;
-}
-
-.button-secondary {
-  background-color: #313131;
-  border: none;
-  color: white;
-  width: 150px;
-  height: 40px;
-}
-
-.input-search {
-  margin-left: 10px;
-  padding: 12px;
-  width: 400px;
-  height: 40px;
-  background-color: #313131;
-  color: gray;
-}
-
-.header-options {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: nowrap;
-  align-items: center;
-}
-
-.header-options-sub {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: nowrap;
-}
-
-#image-background {
-  display: flex;
-  background: url("../assets/imgs/pizza-background.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  align-items: center;
-  height: 100vh;
-}
-
-.background-options {
-  margin: 30px;
-  padding: 12px;
-  background-color: rgba(19, 19, 19, 0.8);
-}
-
-.input-search:focus {
-  background-color: white;
-  color: #000000;
-  outline: none;
-}
-
-.button-primary:hover {
+  font-size: 1.5rem;
   cursor: pointer;
-  background-color: orangered;
-  color: white;
+  color: #FFFFFF;
 }
 
-.button-primary:active,
-.button-secondary:active {
-  transform: translateY(1px);
+.menu-toggle:hover {
+  color: #E74C3C;
 }
 
-.button-secondary:hover {
-  cursor: pointer;
-  background-color: white;
-  color: #000000;
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #FFFFFF;
 }
 
-.svg-container {
-  height: 1;
+.nav-links a {
+  margin-left: 1rem;
+  text-decoration: none;
+  color: #FFFFFF;
 }
 
-.test {
-  background-color: white;
-  height: 50vh;
+.nav-links a:hover {
+  color: #E74C3C;
 }
 
-.test-1 {
-  background-color: white;
-  height: 100vh;
+.search-bar {
+  flex-grow: 1;
+  margin: 0 1rem;
 }
 
-.footer {
-  background-color: #000000;
-  height: 100vh;
-}
-
-.information {
-  height: 50vh;
-}
-
-.contact {
-  height: 50vh;
-}
-
-#uveats-title {
-  margin-top: 3%;
-  margin-left: 0;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  font-size: 35px;
-}
-
-.help-center {
+.search-bar input {
   width: 100%;
-  height: 30px;
+  padding: 0.5rem;
+  border: 1px solid #7F8C8D;
+  border-radius: 4px;
+  background-color: #ECF0F1;
+}
+
+.categories-container {
+  background-color: #FFFFFF;
+  margin-top: 1rem;
+  padding: 1rem 0;
+}
+
+.categories {
   display: flex;
-  padding-left: 10%;
-  justify-content: start;
-  margin-top: 1%;
+  overflow-x: auto;
+  padding: 0 1rem;
 }
 
-.help-center-option {
-  margin-top: 2%;
-  color: #FFFFFF;
+.category {
+  min-width: 100px;
+  margin-right: 1rem;
+  text-align: center;
 }
 
-#contact-title {
-  margin-top: 3%;
-  margin-left: 0;
-  font-size: 35px;
-}
-
-.social-information {
-  display: flex;
-  flex-wrap: nowrap;
-  margin-top: 4%;
-  padding-left: 10%;
-  padding-right: 10%;
-}
-
-.social-media {
-  display: flex;
-  flex-wrap: nowrap;
-  width: 50%;
-  gap: 58px;
-}
-
-.users-personal-information {
-  display: flex;
-  width: 50%;
-  align-items: center;
-  justify-content: flex-end;
-}
-
-.social-media-buttons {
-  width: 40px;
-  height: 40px;
+.category img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
   border-radius: 50%;
-  background-color: transparent;
-  border: none;
+  border: 2px solid #E74C3C;
+}
+
+.restaurants {
+  background-color: #ECF0F1;
+  margin-top: 1rem;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.restaurant {
+  background-color: #FFFFFF;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.restaurant:hover {
+  transform: scale(1.01);
+  box-shadow: 0 0 5px #E74C3C;
+}
+
+.restaurant img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-right: 1rem;
+  border-radius: 4px;
+  border: 2px solid #E74C3C;
+}
+
+.restaurant-info h3 {
+  margin: 0;
+  color: #E74C3C;
+}
+
+.restaurant-info p {
+  margin: 0.5rem 0;
+  color: #7F8C8D;
+}
+
+.social-links {
   display: flex;
   justify-content: center;
-  align-items: center;
-  transition: background-color 0.3s;
+  gap: 1rem;
+  margin-top: 0.5rem;
 }
 
-.social-media-buttons:hover {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.5);
-  border: none;
-  display: flex;
+.social-links a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  color: #E74C3C;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: #FFFFFF;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  transition: left 0.3s ease;
+  z-index: 1000;
+}
+
+.menu.active {
+  left: 0;
+}
+
+.menu-content {
+  padding: 2rem;
+}
+
+.menu-content a {
+  display: block;
+  margin-bottom: 1rem;
+  color: #34495E;
+  text-decoration: none;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 999;
+}
+
+.overlay.active {
+  display: block;
+}
+
+.modal {
+  display: none; /* Oculto por defecto */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
   justify-content: center;
   align-items: center;
-  transition: background-color 0.3s;
 }
 
-#personal-information-privacy {
-  color: #FFFFFF;
+/* Estilo del contenido del modal */
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  width: 300px;
+  max-width: 90%;
+  position: relative;
+  text-align: center;
 }
 
-.downloads {
-  display: flex;
-  flex-wrap: nowrap;
-  gap: 75px;
-  margin-top: 1%;
-  margin-left: 10%;
+/* Botón para cerrar el modal */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
 }
 
-.downloads-app {
-  width: 128px;
-  height: 128px;
+form label {
+  display: block;
+  margin: 10px 0 5px;
 }
 
-.copyright-rules {
-  display: flex;
-  flex-wrap: nowrap;
-  padding-left: 10%;
-  padding-right: 10%;
+form input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
 }
 
-.copyright {
-  width: 50%;
-  color: gray;
-  font-size: 13px;
-  margin-top: 1%;
+form button {
+  padding: 10px 15px;
+  background-color: #2C3E50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s;
 }
 
-.rules {
-  width: 50%;
-  display: flex;
-  flex-wrap: nowrap;
-  gap: 64px;
-  justify-content: end;
-  margin-top: 1%;
-}
-
-.rules-options {
-  color: gray;
-  font-size: 13px;
+form button:hover {
+  background-color: #E74C3C;
 }
 
 /*# sourceMappingURL=style.css.map */
