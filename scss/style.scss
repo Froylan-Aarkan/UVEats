@@ -8,6 +8,9 @@ $color-background: #ECF0F1;
 $color-black: #000000;
 $color-white: #FFFFFF;
 
+$color-facebook: #3b5998;
+$color-google: #dd4b39;
+
 $color-text: #34495E;
 $color-text-light: #7F8C8D; 
 
@@ -64,6 +67,7 @@ footer {
 }
 
 .logo {
+    font-family: $font-logo;
     font-size: 1.5rem;
     font-weight: bold;
     color: $color-white;
@@ -82,14 +86,25 @@ footer {
 .search-bar {
     flex-grow: 1;
     margin: 0 1rem;
+    gap: 0.5rem;
 }
 
 .search-bar input {
-    width: 100%;
+    width: 50%;
     padding: 0.5rem;
     border: 1px solid $color-text-light;
     border-radius: 4px;
     background-color: $color-background;
+}
+
+.cart-link {
+    margin-top: 5px;
+    color: $color-white;
+    text-decoration: none;
+}
+
+.cart-link:hover {
+    color: $color-secondary;
 }
 
 .categories-container {
@@ -108,6 +123,12 @@ footer {
     min-width: 100px;
     margin-right: 1rem;
     text-align: center;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.category:hover {
+    color: $color-secondary;
 }
 
 .category img {
@@ -116,6 +137,10 @@ footer {
     object-fit: cover;
     border-radius: 50%;
     border: 2px solid $color-secondary;
+}
+
+.category img:hover {
+    transform: scale(1.05);
 }
 
 .restaurants {
@@ -232,13 +257,117 @@ footer {
 
 /* Estilo del contenido del modal */
 .modal-content {
-    background-color: white;
+    background-color: $color-white;
     padding: 20px;
     border-radius: 5px;
     width: 300px;
     max-width: 90%;
     position: relative;
     text-align: center;
+}
+
+.modal-content h2 {
+    margin-bottom: 20px;
+    color: $color-primary;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+    
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: $color-text;
+}
+
+.form-group input {
+    width: 90%;
+    padding: 10px 10px;
+    border: 1px solid #BDC3C7;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.social-login {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.social-login p {
+    margin-bottom: 10px;
+    color: $color-text;
+}
+
+.btn-social {
+    width: 95%;
+    margin-bottom: 10px;
+    text-align: left;
+    padding-left: 50px;
+    position: relative;
+    color: $color-white;
+    transition: transform(0.2s);
+}
+
+.btn-social i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.btn-facebook {
+    background-color: $color-facebook
+}
+
+.btn-facebook:hover {
+    background-color: #25385f;
+}
+
+.btn-google {
+    background-color: $color-google;
+}
+
+.btn-google:hover {
+    background-color: #8a2f24;
+}
+
+.btn-twitter {
+    background-color: $color-black;
+}
+
+.btn-twitter:hover {
+    background-color: $color-white;
+    color: $color-black;
+    border: 1px solid $color-black;
+}
+
+.form-switch {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 14px;
+    color: $color-text-light;
+}
+
+.form-switch a {
+    color: #3498DB;
+    text-decoration: none;
+}
+
+.form-switch a:hover {
+    color: $color-secondary;
+    text-decoration: underline;
 }
   
   /* Botón para cerrar el modal */
@@ -250,15 +379,8 @@ footer {
     cursor: pointer;
 }
 
-form label {
-    display: block;
-    margin: 10px 0 5px;
-}
-
-form input {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
+.close:hover {
+    color: $color-secondary;
 }
 
 form button {
@@ -266,10 +388,67 @@ form button {
     background-color: $color-primary;
     color: white;
     border: none;
+    border-radius: 4px;
     cursor: pointer;
     transition: 0.2s;
 }
 
 form button:hover {
+    background-color: $color-secondary;
+}
+
+.location-select {
+    display: flex;
+    align-items: center;
+    margin-right: 0.5rem;
+    font-size: 1.5rem;
+    color: $color-text;
+}
+
+.location-link {
+    font-size: 1rem;
+    color: $color-white;
+    text-decoration: none;
+    margin-right: 0.5rem;
+    margin-left: 1rem;
+}
+
+.location-link:hover {
+    color: $color-secondary;
+}
+
+#locationLabel {
+    margin-top: 5px;
+    margin-left: 0.5rem;
+    font-size: 1rem;
+    color: $color-text-light;
+}
+
+#map {
+    width: 100%;
+    height: 300px;
+    border-radius: 4px;
+}
+
+#mapModal .modal-content {
+    width: 400px;
+    max-width: 90%;
+    padding: 20px;
+    position: relative;
+    text-align: center;
+}
+
+#confirmLocation {
+    padding: 10px 15px;
+    background-color: $color-primary;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.2s;
+    margin-top: 10px;
+}
+
+#confirmLocation:hover {
     background-color: $color-secondary;
 }
