@@ -35,46 +35,66 @@
             <section class="categories-container">
                 <div class="categories">
                     <div class="category">
-                        <img src="/placeholder.svg?height=60&width=60" alt="Pizza">
-                        <p>Pizza</p>
+                        <img src="assets/imgs/panqueques.png" alt="Breakfast">
+                        <p>Breakfast</p>
                     </div>
                     <div class="category">
-                        <img src="/placeholder.svg?height=60&width=60" alt="Sushi">
-                        <p>Sushi</p>
+                        <img src="assets/imgs/ramen.png" alt="Chinese">
+                        <p>Chinese</p>
                     </div>
                     <div class="category">
-                        <img src="/placeholder.svg?height=60&width=60" alt="Burger">
-                        <p>Burgers</p>
+                        <img src="assets/imgs/taza-de-cafe.png" alt="Coffee">
+                        <p>Coffee</p>
                     </div>
                     <div class="category">
-                        <img src="/placeholder.svg?height=60&width=60" alt="Mexican">
+                        <img src="assets/imgs/comida-rapida.png" alt="Fast food">
+                        <p>Fast food</p>
+                    </div>
+                    <div class="category">
+                        <img src="assets/imgs/pizza.png" alt="Italian">
+                        <p>Italian</p>
+                    </div>
+                    <div class="category">
+                        <img src="assets/imgs/sushi.png" alt="Japanese">
+                        <p>Japanese</p>
+                    </div>
+                    <div class="category">
+                        <img src="assets/imgs/taco.png" alt="Mexican">
                         <p>Mexican</p>
                     </div>
                 </div>
             </section>
     
             <section class="restaurants">
-                <div class="restaurant">
+                <div class="restaurant" data-category="Italian">
                     <img src="/placeholder.svg?height=100&width=100" alt="Restaurant 1">
                     <div class="restaurant-info">
-                        <h3>Restaurante Delicioso</h3>
-                        <p>$ • Italian, Pizza</p>
+                        <h3>Little caesars</h3>
+                        <p>$ • Pizza, Fast food</p>
                         <p>30-45 min • 4.5 ★</p>
                     </div>
                 </div>
-                <div class="restaurant">
+                <div class="restaurant" data-category="Japanese">
                     <img src="/placeholder.svg?height=100&width=100" alt="Restaurant 2">
                     <div class="restaurant-info">
                         <h3>Sushi Express</h3>
-                        <p>$$ • Japanese, Sushi</p>
+                        <p>$$ • Sushi, Japanese</p>
                         <p>20-35 min • 4.7 ★</p>
                     </div>
                 </div>
-                <div class="restaurant">
+                <div class="restaurant" data-category="Fast food">
                     <img src="/placeholder.svg?height=100&width=100" alt="Restaurant 3">
                     <div class="restaurant-info">
                         <h3>Burger King</h3>
                         <p>$ • Burger, Fast food</p>
+                        <p>15-25 min • 4.2 ★</p>
+                    </div>
+                </div>
+                <div class="restaurant" data-category="Breakfast, Coffee">
+                    <img src="/placeholder.svg?height=100&width=100" alt="Restaurant 4">
+                    <div class="restaurant-info">
+                        <h3>Cafe Don Justo</h3>
+                        <p>$ • Coffee, Coffee, Breakfast</p>
                         <p>15-25 min • 4.2 ★</p>
                     </div>
                 </div>
@@ -175,13 +195,29 @@
             </div>
         </div>
 
-        <!-- Contenedor para el mapa modal -->
+        <!-- Map -->
         <div id="mapModal" class="modal">
             <div class="modal-content">
                 <span class="close" data-target="mapModal">&times;</span>
                 <h2>Select the location of delivery</h2>
                 <div id="map" style="width: 100%; height: 300px;"></div>
                 <button id="confirmLocation">Confirm location</button>
+            </div>
+        </div>
+
+        <!-- Cart -->
+        <div id="cartModal" class="modal">
+            <div class="modal-content">
+                <span class="close" data-target="cartModal">&times;</span>
+                <h2>Cart</h2>
+                <div id="cartItems">
+                    <p id="emptyCartMessage">No products in cart.</p>
+                </div>
+                <div id="cartTotal">Total: $0.00</div>
+                <div class="cart-buttons">
+                    <button id="checkoutButton">Pagar</button>
+                    <button id="clearCartButton">Vaciar carrito</button>
+                </div>
             </div>
         </div>
 
