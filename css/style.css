@@ -514,4 +514,79 @@ form button:hover {
   margin-top: 10px;
 }
 
+.column {
+  float: left;
+  width: 50%;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.column input {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.column .input-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.input-group input {
+  flex: 1;
+}
+
+.column button {
+  padding: 8px 12px;
+  white-space: nowrap;
+  height: 40px;
+}
+
+.column label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+button {
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.2s;
+}
+
+.button-primary {
+  background-color: #2C3E50;
+  color: #FFFFFF;
+  height: 40px;
+}
+
+.button-primary:hover {
+  background-color: #E74C3C;
+}
+
+.button-secondary {
+  background-color: #E74C3C;
+  color: #FFFFFF;
+}
+
+.button-secondary:hover {
+  background-color: #2C3E50;
+}
+
+input {
+  border: 1px solid #7F8C8D;
+  border-radius: 8px;
+  background-color: #ECF0F1;
+  font-size: 16px;
+  height: 40px;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+}
+
 /*# sourceMappingURL=style.css.map */

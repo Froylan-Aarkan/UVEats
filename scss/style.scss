@@ -14,6 +14,8 @@ $color-google: #dd4b39;
 $color-text: #34495E;
 $color-text-light: #7F8C8D; 
 
+$input-border-radius: 8px;
+
 body {
     font-family: $font;
     margin: 0;
@@ -527,4 +529,79 @@ form button:hover {
     font-weight: bold;
     color: $color-black;
     margin-top: 10px;
+}
+
+.column {
+    float: left;
+    width: 50%;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.column input {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.column .input-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.input-group input {
+    flex: 1;
+}
+
+.column button {
+    padding: 8px 12px;
+    white-space: nowrap;
+    height: 40px;
+}
+
+.column label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+button {
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.2s;
+}
+
+.button-primary {
+    background-color: $color-primary;
+    color: $color-white;
+    height: 40px;
+}
+
+.button-primary:hover {
+    background-color: $color-secondary;
+}
+
+.button-secondary {
+    background-color: $color-secondary;
+    color: $color-white;
+}
+
+.button-secondary:hover {
+    background-color: $color-primary;
+}
+
+input {
+    border: 1px solid $color-text-light;
+    border-radius: $input-border-radius;
+    background-color: $color-background;
+    font-size: 16px;
+    height: 40px;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
 }
