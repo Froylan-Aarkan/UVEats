@@ -5,7 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>UVEats!</title>
         <link rel="stylesheet" href="css/style.css">     
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">  
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> 
+        <script src="js/zipcode.js" defer></script> 
     </head>
     <body>
         <header>
@@ -20,20 +21,20 @@
                     <div class="column">
                         <label for="restaurant-name">Restaurant name</label>
                         <input id="restaurant-name" class="" placeholder="restaurant name">
-                        <label for="restaurant-state">State</label>
-                        <input id="restaurant-state" class="" placeholder="restaurant state" disabled>
-                        <label for="restaurant-city">City</label>
-                        <input id="restaurant-city" class="" placeholder="restaurant city" disabled>   
+                        <label for="restaurant-country">Country</label>
+                        <input id="restaurant-country" class="" placeholder="restaurant country" disabled>
+                        <label for="restaurant-city">Place</label>
+                        <input id="restaurant-city" class="" placeholder="restaurant place" disabled>   
                     </div>
     
                     <div class="column">
                         <label for="restaurant-zipcode">Zip code</label>
                         <div class="input-group">
-                            <input id="restaurant-zipcode" placeholder="restaurant zip code">
+                            <input id="restaurant-zipcode" type="number" placeholder="restaurant zip code">
                             <button id="zipcode-button" class="button-secondary">load</button>
                         </div>
-                        <label for="restaurant-country">Country</label>
-                        <input id="restaurant-country" class="" placeholder="restaurant country" disabled>
+                        <label for="restaurant-state">State</label>
+                        <input id="restaurant-state" class="" placeholder="restaurant state" disabled>
                         <label for="restaurant-street">Street</label>
                         <input id="restaurant-street" class="" placeholder="restaurant street">
                     </div>
@@ -42,5 +43,6 @@
                 <button id="register-button" class="button-primary">Register</button>
             </div>           
         </main>
+
     </body>
 </html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>UVEats!</title>
+        <link rel="stylesheet" href="css/style.css">     
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>  
+        <script src="js/orders.js" defer></script>
+    </head>
+
+    <body>
+        <header>
+            <div class="menu-logo">
+                <a href="index.html" class="logo">UV Eats</a>
+            </div>
+        </header>
+
+        <main>
+            <h1>Available Orders</h1>
+            <ul id="order-list" class="order-list">
+                <!-- Los pedidos se generarán dinámicamente -->
+            </ul>
+            <div id="map"></div>
+        </main>
+    </body>
+</html>
