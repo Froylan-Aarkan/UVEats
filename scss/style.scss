@@ -515,11 +515,16 @@ form button:hover {
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
+/* Estilo para las imágenes de los platillos */
 .dish-card img {
     width: 100%;
-    height: 150px;
-    object-fit: cover;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: $color-background;
 }
+
 
 .dish-card .info {
     padding: 10px;
