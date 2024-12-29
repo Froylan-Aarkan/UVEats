@@ -55,26 +55,45 @@ document.getElementById('showLogin').addEventListener('click', (e) => {
 let map, marker;
 
 function initMap() {
-    map = new google.maps.Map(document.getElementById("map"), {
-        center: { lat: -34.397, lng: 150.644 }, // Ubicación inicial
-        zoom: 8,
-    });
-    marker = new google.maps.Marker({
-        position: { lat: -34.397, lng: 150.644 },
-        map: map,
-        draggable: true,
-        title: "Arrastra para seleccionar la ubicación",
-    });
+    mapboxgl.accessToken = 'pk.eyJ1IjoiMWZyYW50ei1qLXJpdmVyYTEiLCJhIjoiY201OG51YmZqM3l2ZzJxcGt5NXU5bWpubCJ9.gU18fVsy1j9FPtuKynhSNQ';
 
-    google.maps.event.addListener(marker, 'dragend', function() {
-        const position = marker.getPosition();
-        console.log("Ubicación seleccionada:", position.lat(), position.lng());
+    map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v11',
+        center: [-96.92370, 19.52645],
+        zoom: 9
+    });
+    let marker = new mapboxgl.Marker({
+        draggable: true
+    })
+    .setLngLat([-96.92370, 19.52645])
+    .addTo(map);
+    marker.on('dragend', function() {
+        const lngLat = marker.getLngLat();
+        const url = `https://api.mapbox.com/geocoding/v5/mapbox.places/${lngLat.lng},${lngLat.lat}.json?access_token=pk.eyJ1IjoiMWZyYW50ei1qLXJpdmVyYTEiLCJhIjoiY201OG51YmZqM3l2ZzJxcGt5NXU5bWpubCJ9.gU18fVsy1j9FPtuKynhSNQ`;
+        fetch(url)
+        .then(response=>response.json())
+        .then(data=> {
+            const place = data.features[0]?.place_name;
+            if(place){
+                console.log("Selected location:", place);
+                document.getElementById("locationLabel").textContent = `Location: ${place}`;
+            }else{
+                console.log("Selected location:", lngLat.lng, lngLat.lat);
+                document.getElementById("locationLabel").textContent = `Lat: ${lngLat.lat.toFixed(5)}, Lng: ${lngLat.lng.toFixed(5)}`;
+            }
+        })
+        .catch(error => {
+            console.error('Error obtaining the location:', error);
+            document.getElementById("locationLabel").textContent = `Lat: ${lngLat.lat.toFixed(5)}, Lng: ${lngLat.lng.toFixed(5)}`;
+        });
     });
 }
 
 document.getElementById("locationLink").addEventListener("click", (event) => {
   event.preventDefault();
   document.getElementById("mapModal").style.display = "flex";
+  initMap();
 });
 
 document.getElementById("confirmLocation").addEventListener("click", () => {
